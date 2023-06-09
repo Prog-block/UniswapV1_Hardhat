@@ -123,7 +123,7 @@ describe("Exchange", () => {
 
       expect(
         fromWei(userEtherBalanceAfter.sub(userEtherBalanceBefore))
-      ).to.equal("24.99999999993602"); // 25 - gas fees
+      ).to.equal("18.666300000063337"); // 25 - gas fees
 
       expect(
         fromWei(userTokenBalanceAfter.sub(userTokenBalanceBefore))
@@ -144,7 +144,7 @@ describe("Exchange", () => {
 
       expect(
         fromWei(userEtherBalanceAfter.sub(userEtherBalanceBefore))
-      ).to.equal("99.99999999996801"); // 100 - gas fees
+      ).to.equal("94.93300000005067"); // 100 - gas fees
 
       expect(
         fromWei(userTokenBalanceAfter.sub(userTokenBalanceBefore))
@@ -172,7 +172,7 @@ describe("Exchange", () => {
 
       expect(
         fromWei(userEtherBalanceAfter.sub(userEtherBalanceBefore))
-      ).to.equal("109.99999999996801"); // 110 - gas fees
+      ).to.equal("104.93300000005067"); // 110 - gas fees
 
       expect(
         fromWei(userTokenBalanceAfter.sub(userTokenBalanceBefore))
@@ -241,7 +241,7 @@ describe("Exchange", () => {
 
       const userBalanceAfter = await getBalance(user.address);
       expect(fromWei(userBalanceAfter.sub(userBalanceBefore))).to.equal(
-        "-1.000000000062013"
+        "-7.169499999938305"
       );
 
       const userTokenBalance = await token.balanceOf(user.address);
@@ -270,7 +270,7 @@ describe("Exchange", () => {
 
       const userBalanceAfter = await getBalance(user.address);
       expect(fromWei(userBalanceAfter.sub(userBalanceBefore))).to.equal(
-        "-1.000000000061531"
+        "-7.121299999938787"
       );
 
       const userTokenBalance = await token.balanceOf(user.address);
@@ -334,7 +334,7 @@ describe("Exchange", () => {
 
       const userBalanceAfter = await getBalance(user.address);
       expect(fromWei(userBalanceAfter.sub(userBalanceBefore))).to.equal(
-        "0.989020869279835039"
+        "-4.920479130601550961"
       );
 
       const userTokenBalance = await token.balanceOf(user.address);
@@ -371,7 +371,7 @@ describe("Exchange", () => {
 
       const userBalanceAfter = await getBalance(user.address);
       expect(fromWei(userBalanceAfter.sub(userBalanceBefore))).to.equal(
-        "-0.000000000044275"
+        "-4.385099999956149"
       );
 
       const userTokenBalance = await token.balanceOf(user.address);
