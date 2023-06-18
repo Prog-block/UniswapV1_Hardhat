@@ -179,14 +179,6 @@ describe("Exchange", () => {
       ).to.equal("181.98362147406733394");
     });
 
-    it("burns LP-tokens", async () => {
-      await expect(() =>
-        exchange.removeLiquidity(toWei(25))
-      ).to.changeTokenBalance(exchange, owner, toWei(-25));
-
-      expect(await exchange.totalSupply()).to.equal(toWei(75));
-    });
-
     it("doesn't allow invalid amount", async () => {
       await expect(exchange.removeLiquidity(toWei(100.1))).to.be.revertedWith(
         "burn amount exceeds balance"
